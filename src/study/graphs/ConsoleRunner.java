@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class ConsoleRunner {
     public static final String REGEX = "(add\\s*\\d*)|connect(\\s\\d){2}|next|check";
-
+    public static final String START_MESSAGE = "choose command:\n add <connect to node id, optional>,\n connect" +
+            " <node 1, node2> - connect 2 nodes , \n next - go to second tree, \n check - check graphs isomorphism";
     public static void main(String[] args) {
         run();
     }
@@ -14,7 +15,9 @@ public class ConsoleRunner {
         Tree tree1 = new Tree();
         Tree tree2 = new Tree();
         Tree curTree = tree1;
+        System.out.println(START_MESSAGE);
         try {
+
             while (true) {
                 String command = scanner.nextLine().trim().toLowerCase();
                 if (!command.matches(REGEX)) {

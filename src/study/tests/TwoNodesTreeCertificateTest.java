@@ -6,7 +6,7 @@ import study.graphs.Tree;
 
 import static org.junit.Assert.assertEquals;
 
-public class OneVertexTreeCertificateTest {
+public class TwoNodesTreeCertificateTest {
     Tree tree;
 
     @Before
